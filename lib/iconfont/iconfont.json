@@ -1,0 +1,30 @@
+{
+  "id": "4371854",
+  "name": "van",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "11372699",
+      "name": "时间",
+      "font_class": "shijian",
+      "unicode": "e8b8",
+      "unicode_decimal": 59576
+    },
+    {
+      "icon_id": "11372771",
+      "name": "时间",
+      "font_class": "shijian1",
+      "unicode": "e8c5",
+      "unicode_decimal": 59589
+    },
+    {
+      "icon_id": "5975445",
+      "name": "城市",
+      "font_class": "chengshi",
+      "unicode": "ec70",
+      "unicode_decimal": 60528
+    }
+  ]
+}

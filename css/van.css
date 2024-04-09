@@ -1,0 +1,293 @@
+/* HTML+CSS */
+
+    /* 
+    1.VS code 在HTML文件刚开始输入“！”可生成自动结构代码
+    2.lang="zh-CN”代表中文，lang="en”代表英文
+    3.<meta name="description" content="描述文字">
+      <meta name="keywords" content="关键词">
+    4.<link rel="shortcut icon" href="ico图标路径" type="image/x-icon"> 
+    */
+
+.box{
+    /* ------ flex ------ */
+        /* 需要添加在父元素中，子元素可以自动的挤压或拉伸 */
+        display: flex;
+        
+            /* 主轴对齐方式 -写在父级*/
+                /* 默认值，起点开始依次排序 */
+                justify-content: flex-start;
+                /* 终点开始依次排序 */
+                justify-content: flex-end;
+                /* 沿着主轴居中排列 */
+                justify-content: center;   /* !!!!! */
+                /* 弹性盒子沿着主轴均匀排列，空白间距均分在弹性盒子两侧 */
+                justify-content: space-around;   /* !!!!! */
+                /* 弹性盒子沿着主轴均匀排列，空白间距均分在相邻盒子之间 */
+                justify-content: space-between;   /* !!!!! */
+                /* 弹性盒子沿着主轴均匀排列，弹性盒子与容器之间间距相等 */
+                justify-content: space-evenly;   /* !!!!! */
+
+            /* 侧轴对齐方式 - 添加到弹性盒子 - 写在父级*/
+                /* 默认值，起点开始依次排序 */
+                align-items: flex-start;
+                /* 终点开始依次排序 */
+                align-items: flex-end;
+                /* 沿侧轴居中排列 */
+                align-items: center;   /* !!!!! */
+                /* 默认值，弹性盒子沿着主轴线被拉伸至铺满容器 */
+                align-items: stretch;   /* !!!!! */
+
+            /* 主轴方向 */
+            /* 行，水平(默认值) */
+            flex-direction: row;
+            /* 列，垂直 */
+            flex-direction: column;  /* !!!!! */
+            /* 行，从右向左 */
+            flex-direction: row-reverse;
+            /* 列从下往上 */
+            flex-direction: column-reverse;
+
+            /* 弹性盒子换行 */
+            flex-wrap: wrap;
+            /* 调整行对齐方式 */
+            align-content: 取值与 justify-content 基本相同;
+
+            /* flex */
+                /* 使用flex属性修改弹性盒子伸缩比，只占用父盒子剩余尺寸 */
+                /* flex: 数值(整数); */
+
+    /* ------ 位移 ------ */
+        /* 移动自身X、Y轴的50% */
+        transform: translate(-50%,-50%);   
+
+    /* ------ 旋转 ------ */
+        /* 角度单位是deg */
+        transform: rotate(30deg);
+
+    /* ------ 渐变 ------ */
+        background-image: linear-gradient(red , blue);
+        /* 透明到有颜色 */
+        background-image: linear-gradient(transparent, rgba(0,0,0,0.6));
+        /* 方向 */
+        background-image: linear-gradient(to bottom, yellow, green);
+        background-image: linear-gradient(45deg, orange, purple);
+
+    /* ------ 垂直对齐方式 ------ */
+        /* 默认，基线对齐 */
+        vertical-align: baseline;
+        /* 顶部对齐 */
+        vertical-align: top;
+        /* 中部对齐 */
+        vertical-align: middle;
+        /* 底部对齐 */
+        vertical-align: bottom;
+    
+    /* ------ 单行文字省略号... ------ */ 
+        /* 父级写 flex:1;  width:0; */
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+    /* 两行文字溢出省略号... */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+
+     /* ------ 选择器动作语法 ------ */
+        /* 点击显示效果，尝用在表单控件获取焦点时默认会显示外部轮廓线 */
+        /* input:focus{ background-color: red;} */
+        /* 移入改变效果 */
+        /* hover */
+
+    /* ------ 过渡/动画 ------ */
+        transition: all 2s;
+        /* 只有宽度过度 */
+        transition: width 2s; 
+        /* 过渡最好加在元素中，如果加在hover中则没有移出的过渡效果 */
+
+    /* 文本缩进 */
+    text-indent: 2em;
+
+    /* ------ 文本修饰 ------ */
+        /* 下划线 */
+        text-decoration: underline;
+        /* 删除线 */
+        text-decoration: line-through;
+        /* 上划线 */
+        text-decoration: overline;
+        /* 无装饰线 */
+        text-decoration: none;
+
+    /* 多种字体备用选择 */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    /* ------ 背景图片重复属性 ------ */
+        /* （默认）水平垂直都平铺 */
+        background-repeat:repeat ;
+        /* 不平铺 */
+        background-repeat: no-repeat;
+        /* 沿X方向平铺 */
+        background-repeat: repeat-x;
+        /* 沿Y方向平铺 */
+        background-repeat: repeat-y;
+
+    /* 权重 */
+    color: red !important;
+
+    /* ------ 光标 ------ */
+        /* 默认值，通常是箭头 */
+        cursor: default;
+        /* 小手效果，提示用户可以点击 */
+        cursor: pointer;
+        /* 工字型，提示用户可以选择文字 */
+        cursor: text;
+        /* 十字光标，提示用户可以移动 */
+        cursor: move;
+
+    /* ------ overflow属性 ------ */
+        /* 默认值，溢出部分可见 */
+        overflow:visible;
+        /* 溢出部分隐藏 */
+        overflow: hidden;
+        /* 无论是否溢出，都显示滚动条 */
+        overflow: scroll;
+        /* 根据是否溢出，自动显示或隐藏滚动条 */
+        overflow: auto;
+
+    /* ------ 隐藏 ------ */
+        /* 隐藏元素本身，并在网页中占位置 */
+        visibility: hidden;
+        /* 隐藏元素本身，并在网页中不占位置 */
+        display: none; 
+
+    /* ------ 属性选择器 ------ */
+        /* 
+        E[attr]         ---   选择具有 attr 属性的 E 元素
+        E[attr='val']   ---   选择具有 attr 属性并且属性值等于 val 的 E 元素 
+        */
+
+    /* ------ 空间位移 ------ */
+        transform: translate3d(x,y,z);
+        transform: translateX(30px);
+
+    /* ------ 透视 ------ */
+    perspective: 800-1200;
+
+    /* 立体呈现 */
+    transform-style: preserve-3d;
+
+}
+
+/* ------ 选择器 ------ */
+    /* 
+    E:first-child{}         ---   父元素中第一个子元素，并且是E元素
+    E:last-child{}          ---   父元素中最后一个子元素，并且是E元素
+    E:nth-child(n){}        ---   父元素中第n个子元素，并且是E元素 (直接在所有孩子中数个数)
+    E:nth-last-child(n){}   ---   父元素中倒数第个子元素，并且是E元素 
+    E:nth-of-type(n){}      ---   只在父元素的同类型(E)子元素范围中，匹配第n个 (先通过该 类型 找到符合的一堆子元素，然后在这一对子元素中数个数)
+    n为0,1,2,3,4,5,6......   偶数:2n、even;     奇数:2n+1、2n-1、odd     找到前5个:-n+5      找到第5个往后:n+5
+    */
+
+    /* 
+    E::before      ---   在父元素内容的最前添加一个伪元素
+    E::after       ---   在父元素内容的最后添加一个伪元素
+    父元素 样式 必须设置content:'';       伪元素默认是行内元素
+    */
+
+    /* 选择器1>选择器2{css}   ----   选择器1的子代（儿子）中的选择器2 */
+    /* !important > 行内样式 > id选择器 > 类选择器（div p） > 标签选择器(.box) > 通配符选择器（*）> 继承 */
+
+/* ------ 动画 ------ */
+    /* 一刷新就有效果 */
+    .change{
+        width: 200px;
+        animation: change 1s;
+        /* 匀速 */
+        animation: change 1s linear;
+        /* 分步骤 */
+        animation: change 1s steps(3 );
+        /* 延迟4s   */
+        animation: change 1s steps(3 ) 4s ;
+        /* 重复5次 */
+        animation: change 1s steps(3 ) 5;
+        /* 无限循环 */
+        animation: change 1s steps(3 ) infinite;
+        /* 反向 */
+        animation: change 1s steps(3 ) alternate;
+        /* 默认值，停留在最初的状态 */
+        animation: change 1s steps(3 ) backwards;
+        /* 停留在结束的状态 */
+        animation: change 1s steps(3 ) forwards;
+        /* 多组动画 */
+            /* animation: {动画1,动画2,动画n}; */
+    }
+    @keyframes change {
+        from{width: 200px;}
+        to{width: 600px;}
+    }
+    @keyframes change {
+        0%{width: 200px;}
+        30%{width: 600px;}
+        60%{width: 800px;}
+        100%{width: 10 00px;}
+    }
+
+/* ------ 表格 ------ */
+    /* 
+    table tr-每行 td-单元格 caption-表格大标题 th-表头单元格
+    合并：保留左、上单元格。
+        rowspan="2" 跨行合并，总共合并单元格个数
+        colspan="2" 跨列合并，总共合并单元格个数
+            <table>
+                <caption></caption>
+                <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>成绩</th>
+                        <th>评语</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>小红</td>
+                        <td rowspan="2">100</td>
+                        <td>很好</td>
+                    </tr>
+                    <tr>
+                        <td>小黄</td>
+                        <!-- <td>99</td> -->
+                        <td>很好</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>总结</td>
+                        <td colspan="2">很好</td>
+                        <!-- <td>很好</td> -->
+                    </tr>
+                </tfoot>
+            </table> 
+            */
+
+    /* ------ 适配 ------ */
+    /* @rootSize: 37.5rem; */
+
+    @media (width:320px){
+        html{
+            font-size: 30px;
+        }
+    }
+
+    .box{
+        width: 1rem;
+    }
+
+    /* 响应式网页 */
+    @media (max-width:1920px){
+        /* 样式 */
+    }
+    @media (min-width:320){
+        /* 样式   */
+    }
