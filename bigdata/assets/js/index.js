@@ -19,7 +19,7 @@ $(function() {
     })
   })
 })
-
+ 
 // 获取用户的基本信息
 function getUserInfo() {
   $.ajax({
@@ -30,7 +30,7 @@ function getUserInfo() {
         return layui.layer.msg('获取用户信息失败！')
       }
       // 调用 renderAvatar 渲染用户的头像
-      renderAvatar(res.data)
+      renderAvatar(res.data)  
     }
     // 不论成功还是失败，最终都会调用 complete 回调函数
     // complete: function(res) {
